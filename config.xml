@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ziba.fedex.sig" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SigExample</name>
+    <description>
+        A sample Apache Cordova application that rocks a signature.
+    </description>
+    <author email="todd_greco@ziba.com" href="http://ziba.com">
+        Todd Greco
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
