@@ -26,7 +26,9 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.onDeviceReady, false);        
+        window.addEventListener('orientationchange', this.doOnOrientationChange);
+        
     },
     // deviceready Event Handler
     //
@@ -34,18 +36,49 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		$('#simple_sketch').sketch({defaultColor: "#ccc"});
+		
+		var sketchWidth = $( window ).width() - 50;
+		$('#simple_sketch').width(sketchWidth);
+		
+		var showDims = "height: " + $( document ).height() + " width: " + $( document ).width();
+		
+		$('#texty').html("");
+        
     },
+    
+    
+	doOnOrientationChange: function()
+	{
+		
+		var showDims = "sketchWidth: " + $( '#simple_sketch' ).width() + " winWidth: " + $( window ).width();
+		
+		var sketchWidth = $( window ).width() - 50;
+		
+		
+ 	   switch(window.orientation) 
+ 	   {  
+	 	   case -90:
+	 	   case 90:
+	 	     $('#simple_sketch').height(150);
+	 	     $('#simple_sketch').width(sketchWidth);
+	 	  //	 $('#texty').html(showDims);
+	 	  	 break; 
+	 	  default:
+	 	  	 $('#simple_sketch').height(300);
+	 	     $('#simple_sketch').width(sketchWidth);
+	 	  	// $('#texty').html(showDims);
+	 	break; 
+    	}
+  	},    
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+
+
+
+

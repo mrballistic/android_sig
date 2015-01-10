@@ -38,4 +38,6 @@
 /Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/assets/www/css/index.css \
 /Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/assets/www/img/logo.png \
 /Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/assets/www/js/index.js \
+/Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/assets/www/js/jq.js \
+/Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/assets/www/js/sketch.js \
 /Users/todd_greco/Documents/work/fedex/smartpad_proto_sig/sig/platforms/android/ant-build/AndroidManifest.xml \
